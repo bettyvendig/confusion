@@ -36,3 +36,25 @@ body {
 .navbar-dark,.navbar-light {
 	background:#512da8;
 }
+* {
+  box-sizing: border-box;
+
+}
+.card-body,.form-group,.form-control {
+	padding:none!important;
+}
+label {
+	padding:0 !important;
+}
+form {
+	margin:10px;
+}
+.card {
+	margin:10px;
+}
+.tab-content {
+	border-right:solid 1px #ddd;
+	border-left:solid 1px #ddd;
+	border-bottom:solid 1px #ddd;
+	padding:10px;
+}
