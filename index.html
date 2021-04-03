@@ -41,12 +41,63 @@
                 <li class="nav-item"><a class="nav-link" href="#"> <span class="fa fa-list fa-lg">&nbsp;</span>menu</a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg">&nbsp;</span>email
                  </a></li>
-               
+              <li class="nav-item">
+                <span class="navbar-text">
+                <a data-toggle="modal" data-target="#loginModal" class="text fa fa-sign-in fa-lg">login</a>
+                </span>
+            </li>
             </ul>
+            <span class="navbar-text">
+                <a data-toggle="modal" data-target="#loginModal" class="text fa fa-sign-in fa-lg">login</a>
+            </span>
         </div>
             
         </div>
     </nav>
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInput">name</label>
+                                <input class="form-control" type="text" name="exampleInput" id="exampleInput" placeholder="Enter Name">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="inputPassword">name</label>
+                                <input class="form-control" type="password" name="inputPassword" id="inputPassword" placeholder="Enter Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <label class="form-check-label"></label><span>
+                                    <input type = "checkbox" class="form-check-input"><span>&nbsp;remember me</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row pull-right">
+                            <input class="btn btn-primary btn-sm m-1" type="submit" id="submit" value="SignIn" name="submit">
+                            <input class="btn btn-secondary btn-sm m-1" type="button" id="cancel" value="cancel" name="cancel" data-dismiss="modal">
+                        </div>
+                    </form>
+                    
+                </div>
+
+            </div>
+            
+        </div>
+        
+
+
+
+
+
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -61,7 +112,8 @@
                 <div class="col-12 col-sm-3 align-self-center text-center"> <!-- xs will have it's own row and all others will have the remaining columns -->
                     <div class="card align-self-center" style="background:#ffa500;color:white;">
                        <!-- <a href="#reserve"><h4 class="card-header badge">Reserve Table</h4></a>-->
-                         <a class="btn btn-block" href="#reserve"><h4>Reserve Table</h4></a>
+                         <a role="button" class="btn btn-block" 
+                         data-toggle="tooltip" data-html="true" data-placement="bottom" title="or call us at 5555555" href="#reserve"><h4>Reserve Table</h4></a>
                     </div>
                 </div>
 
@@ -232,6 +284,12 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(3);
+    });
+
+</script>
 </body>
 
 </html>
